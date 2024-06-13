@@ -100,25 +100,19 @@
   <div class="container is-max-desktop">
     <!--/ Matting. -->
 
+    
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Dynamics Model</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4"></h3>
-        <div class="content has-text-justified">
+        <div class="content has-text-centered">
           <p>
             Our goal is to learn a dynamics model for predicting the future state of a DLO, given the current state and the external effect.
           </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-5 has-text-centered">
-            <img src="./static/images/fig_proposed_model.png"
-                 class="interpolation-image"
-                 alt="Proposed Dynamics Model"/>
-            <p>Proposed Dynamics Model</p>
-          </div>
+          <img src="./static/images/fig_proposed_model.png"
+               class="interpolation-image"
+               alt="Proposed Dynamics Model"/>
+          <p>Proposed Dynamics Model</p>
         </div>
 
         <div class="content has-text-justified">
@@ -126,7 +120,7 @@
             We adopt Graph Nueral Network (GNN) to learn interaction effects between neighbouring particles, and use the attention mechanism to propagate local interaction effects along the DLO. 
           </p>
         </div>
-        <br/>
+
 
         <h2 class="title is-3">CONTROL USING LEARNED DYNAMICS</h2>
         <div class="content has-text-centered">
