@@ -112,7 +112,7 @@
         <div class="content has-text-centered">
           <img src="./static/images/system overview.png"
                class="interpolation-image"
-               alt="Proposed Dynamics Model"
+               alt="Overview"
                style="width: 60%; height: auto;"/>
         </div>
 
@@ -127,13 +127,13 @@
         <div class="content has-text-centered">
           <img src="./static/images/policy overview.png"
                class="interpolation-image"
-               alt="Trajectory Optimization under MPC Framework"
+               alt="Policy Overview"
                style="width: 60%; height: auto;"/>
         </div>
 
         <div class="content has-text-justified">
           <p>
-            For manipulation, we use the shooting method for trajectory optimization, and use Model Predictive Control (MPC) to stabilize the trajectory by optimizing actions and executing the first action at every time step as a way to compensate the prediction error.
+            Overview of policy learning. The policy learning comprises two key components: Perception and Decision. (a) Perception: 3DVA uses single-view point clouds to observe its environment. These point clouds are converted into compact 3D representations by a lightweight Conv1D encoder and a visual attention module. (b) Decision: 3DVA generates actions conditioning on these 3D representations and the robot’s states, utilizing a diffusion-based backbone.
           </p>
         </div>
         
