@@ -136,52 +136,26 @@
             Overview of policy learning. The policy learning comprises two key components: Perception and Decision. (a) Perception: 3DVA uses single-view point clouds to observe its environment. These point clouds are converted into compact 3D representations by a lightweight Conv1D encoder and a visual attention module. (b) Decision: 3DVA generates actions conditioning on these 3D representations and the robot’s states, utilizing a diffusion-based backbone.
           </p>
         </div>
-        
-        <h2 class="title is-3">Real-world Experiments for the test of manipulation speed (inference by GPU)</h2>
+      
+
+        <h2 class="title is-3">Real-world Experiments</h2>
         <div class="content has-text-justified">
           <p>
-            A Kinova Gen3 robot manipulates one end of a DLO to different desired shapes, and the other end is fixed. In real-world experiments, the DLO is a 0.5-m USB cable and characterized by 8 features (red markers). An Intel Realsense D435 RGBD camera is utilized to obtain the positions of features of the DLO at 15 Hz and 1280 x 720 resolution.
+            To evaluate the performance of 3DVA in the real world, we conducted experiments on 3 tasks: Stack, Pour, and Hang.
           </p>
-        </div>
-        <div class="content has-text-centered">
-          <img src="./static/images/png_realworld_setup.png"
-               class="interpolation-image"
-               alt="Real-world Setup"
-               style="width: 20%; height: auto;"/>
-          <p>Real-world Setup</p>
-        </div>
-
-        <div class="content has-text-centered">
-          <video id="L1_manipulation_speed"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="60%">
-            <source src="./static/videos/L1_manipulation_speed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-centered">
-          <img src="./static/images/L1_manipulation_speed.png"
-               class="interpolation-image"
-               alt="L1_manipulation_speed"
-               style="width: 40%; height: auto;"/>
-               <p>
-                The time duration of manipulation is 11 seconds for 10-horizon tasks (inference by Nvidia RTX3090). 
-               </p>
-        </div>
-
-
-        <h2 class="title is-3">Real-world Experiments for Shape Control (inference by CPU)</h2>
-        <div class="content has-text-justified">
           <p>
-            A Kinova Gen3 robot manipulates one end of a DLO to different desired shapes, and the other end is fixed. In real-world experiments, the DLO is a 0.5-m USB cable and characterized by 8 features (red markers). An Intel Realsense D435 RGBD camera is utilized to obtain the positions of features of the DLO at 15 Hz and 1280 x 720 resolution.
+            Stack: The gripper grabs a block, and puts it on another block.
+          </p>
+          <p>
+            Pour: The gripper grabs the teapot handle, moves to the teacup, and pours the water.
+          </p>
+          <p>
+            Hang: The gripper grabs the mug handle, and hangs it on the mug rack.
           </p>
 
-        <h3 class="title is-4">Shape Control Task 1</h3>
+        <h3 class="title is-4">Stack</h3>
         <div class="content has-text-centered">
-          <video id="shape_control_task_1"
+          <video id="Stack_success"
                  controls
                  muted
                  preload
