@@ -6,10 +6,13 @@
   <!--设置字符编码为 UTF-8-->
   <meta name="description"
         content="">
+  <!--用于搜索引擎优化-->
   <meta name="keywords" content="imitation learning">
+  <!--用于搜索引擎优化-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--让页面在移动设备上自适应宽度，提升响应式体验-->
   <title>3DVA</title>  
-  <!--title-->>
+  <!--定义浏览器标签页显示的标题-->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -21,6 +24,7 @@
     gtag('js', new Date());
     gtag('config', 'G-PYVRSFMDRL');
   </script>
+  <!--网站流量统计，通过异步加载和初始化跟踪代码实现数据收集-->
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -31,13 +35,16 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <!--多个 link rel="stylesheet" 标签，引入了 Google 字体、Bulma CSS 框架及其扩展（如轮播和滑块）、FontAwesome 图标库、Academicons 学术图标库，以及自定义样式表 index.css-->
   <link rel="icon" href="./static/images/favicon.svg">
+  <!--设置了网站的 favicon 图标-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <!--script 标签，分别引入了 jQuery、FontAwesome 的 JS 文件、Bulma 的轮播和滑块插件，以及自定义的 index.js 脚本-->
 </head>
 
 
@@ -77,7 +84,7 @@
             To enhance manipulation capabilities, we introduce 3D Visual Attention Diffusion Policy (3DVA), which enhances DP3 by incorporating a visual attention module. This allows the policy to selectively focus on the most pertinent regions of point cloud observations, leading to more effective representation learning. 
           </p>
           <p>
-            In our experiments across 8 simulation tasks, 3DVA surpasses the strong baseline (DP3) with a [X%] relative improvement. Furthermore, on 3 real-world robot tasks, 3DVA demonstrates robust control, achieving an impressive 76\% success rate with only 50 demonstrations per task. It also exhibits excellent generalization across variations in object appearance, lighting conditions, and instances. Our extensive evaluations highlight the critical role of visual attention in learning effective 3D representations for robotic manipulation.
+            In our experiments across 8 simulation tasks, 3DVA surpasses the strong baseline (DP3) with a [X%] relative improvement. Furthermore, on 3 real-world robot tasks, 3DVA demonstrates robust control, achieving an impressive 76% success rate with only 50 demonstrations per task. It also exhibits excellent generalization across variations in object appearance, lighting conditions, and instances. Our extensive evaluations highlight the critical role of visual attention in learning effective 3D representations for robotic manipulation.
           </p>
         </div>
       </div>
@@ -101,12 +108,9 @@
     <!--/ Dynamics Model+Control+Real-world Shape Control+Real-world Generalization-->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Dynamics Model</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-centered">
-          <p>
-            Our goal is to learn a dynamics model for predicting the future state of a DLO, given the current state and the external effect.
-          </p>
-          <img src="./static/images/png_proposed_model.png"
+          <img src="./static/images/system overview.png"
                class="interpolation-image"
                alt="Proposed Dynamics Model"
                style="width: 40%; height: auto;"/>
@@ -114,7 +118,7 @@
 
         <div class="content has-text-justified">
           <p>
-            We adopt Graph Nueral Network (GNN) to learn local interaction effects between neighboring particles, and use the attention mechanism to propagate local interaction effects along the DLO. 
+            Overview of the proposed system. The proposed system comprises three key components: the data collection system, the 3D visuomotor policy learning method, and the real-world deployment. This integrated system enables the robot to execute autonomous skills in diverse real-world scenes.
           </p>
         </div>
 
